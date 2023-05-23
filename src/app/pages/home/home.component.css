@@ -1,18 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap');
-/* font-family: 'Crafty Girls', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 /* font-family: 'Dancing Script', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 /* font-family: 'Lato', sans-serif; */
+
 :root{
     --rosaLogo: #ffccf9;
     --azulLogo: #affcff;
+    --azulNav:#dfe3ee;
     --amarilloLogo: #fff5ba;
     --letraLogo: #160744;
 }
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+.central{
+    max-width: 1270px;
+    margin:0 auto;
 }
+    .titulo{
+        font-family: 'Dancing Script', cursive;
+        font-size: 70px;
+        text-align: center;
+        color: var(--letraLogo);
+    }
+    .me{
+        font-family: 'Lato', sans-serif;
+    }
