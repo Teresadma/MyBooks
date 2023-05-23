@@ -13,7 +13,14 @@
 .central{
     max-width: 1270px;
     margin:0 auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+    .central img{
+        height: 80%;
+        width: 30%;
+    }
     .titulo{
         font-family: 'Dancing Script', cursive;
         font-size: 70px;
@@ -22,4 +29,5 @@
     }
     .me{
         font-family: 'Lato', sans-serif;
+        margin: 15px;
     }
