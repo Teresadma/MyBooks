@@ -10,15 +10,23 @@
     --amarilloLogo: #fff5ba;
     --letraLogo: #160744;
 }
+main{
+    height:80vh;
+}
 .central{
+    height: 100%;
     max-width: 1270px;
     margin:0 auto;
     display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: row;    
+    align-items: center;
+}
+.saludo{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
 }
     .central img{
-        height: 80%;
+        
         width: 30%;
     }
     .titulo{
@@ -28,6 +36,12 @@
         color: var(--letraLogo);
     }
     .me{
+        
         font-family: 'Lato', sans-serif;
-        margin: 15px;
+        margin:20px;        
+        text-align: justify;
     }
+        .negrita{
+            font-weight: bold;
+            color:var(--letraLogo)
+        }

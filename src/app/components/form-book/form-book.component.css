@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+/* font-family: 'Dancing Script', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/* font-family: 'Lato', sans-serif; */
+:root{
+    --rosaLogo: #ffccf9;
+    --azulLogo: #affcff;
+    --amarilloLogo: #fff5ba;
+    --letraLogo: #160744;
+    --azulverdoso: #4ea9af;
+}
+.centrar{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+.form{
+    width: 60%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .form input{
+        width: 100%;
+        margin:5px;
+        padding-left: 10px;
+        height: 40px;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+    }
+    .boton{
+        width: 50%;
+        margin:5px;
+        padding-left: 10px;
+        height: 40px;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        cursor: pointer;
+        color:var(--letraLogo);
+    }
