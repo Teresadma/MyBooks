@@ -1,0 +1,27 @@
+<div class="central">
+    <div class="profile">
+        <div class="user">
+            <div class="imagen">
+                <img src="{{usuario.photo}}" alt="">
+            </div>
+            <div class="me">
+                {{usuario.name}} {{usuario.last_name}}
+            </div>
+            <div class="form">
+                Nombre <div>{{usuario.name}}</div>
+                Apellido<div>{{usuario.last_name}}</div>
+                Email<div>{{usuario.email}}</div>   
+            </div>
+        </div>
+        <div class="newUser">
+            <div class="editar">Editar datos</div>
+            <div class="datosUser">
+                <input type="text" id="name" #name placeholder="Nombre">
+                <input type="text" id="surname" #surname placeholder="Apellido">
+                <input type="text" id="email" #email placeholder="Email">
+                <input type="text" id="url" #url placeholder="Url">
+                <button type="button" class="modificar" on-click="info(name.value,surname.value,email.value,url.value)">Modificar</button>
+            </div>
+        </div>
+    </div>   
+</div>

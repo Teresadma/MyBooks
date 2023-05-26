@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+/* font-family: 'Dancing Script', cursive; */
+:root{
+    --rosaLogo: #ffccf9;
+    --azulLogo: #affcff;
+    --azulNav:#dfe3ee;
+    --amarilloLogo: #fff5ba;
+    --letraLogo: #160744;
+}
+.central{
+    max-width: 1270px;
+    margin:0 auto;
+    height: 500px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+    .profile{
+        height: 450px;
+        width: 80%;
+        border:1px solid var(--letraLogo);
+        display:flex;
+        flex-direction: row;
+    }
+        .user{
+            width: 50%;
+            height: 400px;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+           
+                .imagen img{
+                    border:1px solid var(--letraLogo);
+                    width: 200px;
+                    height: 150px;
+                    border-radius: 20%;
+                    margin-top:5px;
+                }
+                .me{
+                    font-family: 'Dancing Script', cursive;
+                    font-size: 25px;
+
+                }
+                .form{
+                    width: 70%;
+                    display:flex;
+                    flex-direction: column;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: bold;
+
+
+                }
+                .form div{                    
+                    height: 40px;
+                    margin:2px;
+                    padding-left: 5px;
+                    font-family: 'Lato', sans-serif;   
+                    font-size: 15px;    
+                    border:1px solid var(--letraLogo); 
+                    
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+        .newUser{
+            width: 50%;
+            height: 400px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+
+            
+        }
+            .editar{
+                font-size: 60px;
+                text-align: center;
+                margin-bottom: 20px;
+                font-family: 'Dancing Script', cursive;
+                color: var(--letraLogo);            
+            }
+            .datosUser{
+                width: 100%;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+            }
+                .datosUser input{
+                    width: 70%;
+                    height: 40px;
+                    margin:4px;
+                    padding:1px;
+                    font-family: 'Lato', sans-serif; 
+                    font-size: 15px;  
+                }
+                .modificar{
+                    width: 150px;
+                    height: 40px;
+                    margin:10px;
+                    padding:1px;
+                    font-family: 'Dancing Script', cursive;
+                    font-size: 25px;
+                    color: var(--letraLogo);
+                    
+                }
+            
