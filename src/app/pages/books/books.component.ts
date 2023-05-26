@@ -25,8 +25,9 @@ export class BooksComponent {
       let nuevo: Book = new Book(newIDBook,newIDUser, newTitle,newType,newAuthor,newPrice,newPhoto)
       this.libros.push(nuevo)
     }
-  eliminarCard(index:number) {
-    this.libros.splice(index,1)
+  eliminarCard(libroPadre:Book) {
+    let filtrado = this.libros.filter(libroDelete => libroDelete.id_book != libroPadre.id_book);
+    this.libros = filtrado;
   }
 }
 
