@@ -15,6 +15,7 @@ export class BooksComponent implements OnInit{
   ngOnInit(): void
   {
   }
+
   eliminarCard(id:number):void {
     this.booksService.delete(id);
     alert("Se ha eliminado el libro correctamente");
@@ -24,5 +25,14 @@ export class BooksComponent implements OnInit{
     // let libros = this.booksService.getAll();
     // let idlibro = $("idbook") 
     return    
+
+    newLibro( newIDBook: number,newIDUser: number, newTitle: string,newType: string,newAuthor: string,newPrice: number,newPhoto: string){
+      let nuevo: Book = new Book(newIDBook,newIDUser, newTitle,newType,newAuthor,newPrice,newPhoto)
+      this.libros.push(nuevo)
+    }
+  eliminarCard(libroPadre:Book) {
+    let filtrado = this.libros.filter(libroDelete => libroDelete.id_book != libroPadre.id_book);
+    this.libros = filtrado;
+
   }
 }
