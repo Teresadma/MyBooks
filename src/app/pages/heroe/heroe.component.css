@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+/* font-family: 'Dancing Script', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/* font-family: 'Lato', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap');
+
+:root{
+    --rosaLogo: #ffccf9;
+    --azulLogo: #affcff;
+    --azulNav:#dfe3ee;
+    --amarilloLogo: #fff5ba;
+    --letraLogo: #160744;
+}
+main{
+    height:300vh;
+    margin: 20px;
+    font-family: 'Lato', sans-serif;
+
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+    .dialogo{
+        margin-left: 60px;
+    }

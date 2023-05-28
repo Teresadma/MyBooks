@@ -8,6 +8,6 @@ export class Book {
         public author:string,
         public price:number,
         public photo:string,
-    ){}
+        public link:string,){ }
 }
 

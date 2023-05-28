@@ -8,6 +8,6 @@
         <p class="text-body">{{libroPadre.type}}</p>
         <p class="text-body">{{libroPadre.id_book | refID}}</p>
     </div>
-    <a routerLink="" class="card-button" [ngClass]="esPar ? 'par-button' : 'impar-button'">¡Léeme!</a>
+    <button (click) = "goBook()" class="card-button" [ngClass]="esPar ? 'par-button' : 'impar-button'">¡Léeme!</button>
   </div>
   
