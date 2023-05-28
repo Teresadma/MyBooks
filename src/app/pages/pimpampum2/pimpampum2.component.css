@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+/* font-family: 'Dancing Script', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/* font-family: 'Lato', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+:root{
+    --rosaLogo: #ffccf9;
+    --azulLogo: #affcff;
+    --azulNav:#dfe3ee;
+    --amarilloLogo: #fff5ba;
+    --letraLogo: #160744;
+}
+main{
+    height:500vh;
+    margin: 20px;
+    font-family: 'Lato', sans-serif;
+
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.central{
+    height: 100%;
+    max-width: 1220px;
+    margin:0 auto;
+    padding:10px;
+    display:column;
+    flex-direction: row; 
+    font-size: 20px;   
+    align-items: center;
+    text-align: justify;
+    font-family: 'Indie Flower', cursive;
+}
+    .centrado{
+        text-align: center;
+    }
+
+        .reportes{
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+            .pum{
+                font-family: 'Inter', sans-serif;
+            }
+
+            .pim{
+                font-family: 'Indie Flower', cursive;
+            }
+            .worryman{
+                font-family: 'Dosis', sans-serif;
+            }
+            .skully{
+                font-family: 'Lora', serif;
+            }
+            .firma{
+                text-align: end;
+                font-size: 25px;
+            }

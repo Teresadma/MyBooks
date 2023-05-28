@@ -10,10 +10,18 @@ import { FormRegisterComponent } from './components/form-register/form-register.
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
-import { FormBookComponent } from './components/form-book/form-book.component';
 import { RefIDPipe } from './pipes/ref-id.pipe';
-import { PimpampumComponent } from './pages/pimpampum/pimpampum.component';
 import { CardComponent } from './components/card/card.component';
+import { AddbookComponent } from './pages/addbook/addbook.component';
+import { UpdatebookComponent } from './pages/updatebook/updatebook.component';
+import { Pimpampum1Component } from './pages/pimpampum1/pimpampum1.component';
+import { PapaComponent } from './pages/papa/papa.component';
+import { Pimpampum2Component } from './pages/pimpampum2/pimpampum2.component';
+import { PazComponent } from './pages/paz/paz.component';
+import { AguilaComponent } from './pages/aguila/aguila.component';
+import { HeroeComponent } from './pages/heroe/heroe.component';
+import { EstrellaComponent } from './pages/estrella/estrella.component';
+import { AndroideComponent } from './pages/androide/androide.component';
 
 
 
@@ -28,10 +36,18 @@ import { CardComponent } from './components/card/card.component';
     RegisterComponent,
     ProfileComponent,
     BooksComponent,
-    FormBookComponent,
     RefIDPipe,
-    PimpampumComponent,
-    CardComponent,  
+    CardComponent,
+    AddbookComponent,
+    UpdatebookComponent,
+    Pimpampum1Component,
+    PapaComponent,
+    Pimpampum2Component,
+    PazComponent,
+    AguilaComponent,
+    HeroeComponent,
+    EstrellaComponent,
+    AndroideComponent,  
   ],
   imports: [
     BrowserModule,

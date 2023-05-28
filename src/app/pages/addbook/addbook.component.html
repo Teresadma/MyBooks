@@ -1,0 +1,14 @@
+<div class="centrar">
+    <div class="titulo">¡Añade el libro que más te guste!</div>
+    <div class="form">
+        <input type="text" #id_book placeholder="ID Book">
+        <input type="text" #id_user placeholder="ID Autor">
+        <input type="text" #title placeholder="Título">
+        <input type="text" #type placeholder="Categoría">
+        <input type="text" #author placeholder="Autor">
+        <input type="text" #price placeholder="Precio">
+        <input type="text" #photo placeholder="Foto">
+        <input type="text" #link placeholder="Link">
+        <button type="button" class="boton" (click)="newLibro(+id_book.value,+id_user.value,title.value,type.value,author.value,+price.value,photo.value,link.value)">Insertar</button>
+    </div>
+</div>

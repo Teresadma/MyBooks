@@ -1,5 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { BooksService } from 'src/app/shared/books.service';
 import { Book } from 'src/app/models/book';
+import { Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-card',
@@ -12,11 +15,18 @@ export class CardComponent implements OnInit
   @Input() esPar: boolean;
   @Output() borrarCard =  new EventEmitter<number>();  
 
-  constructor(){}
-  closeCard(){
-        this.borrarCard.emit();
+  //CONSTRUCTOR
+
+  constructor(public booksService: BooksService, private router: Router){}
+
+  goBook(){
+    this.router.navigate(['/pimpampum1'])
   }
-    ngOnInit(): void
-    {
-    } 
+
+  closeCard(){
+    this.borrarCard.emit(this.libroPadre.id_book);
+  }
+  ngOnInit(): void
+  {
+  }
 }
