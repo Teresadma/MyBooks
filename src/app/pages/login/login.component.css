@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+/* font-family: 'Dancing Script', cursive; */
+:root{
+    --rosaLogo: #ffccf9;
+    --azulLogo: #affcff;
+    --azulNav:#dfe3ee;
+    --amarilloLogo: #fff5ba;
+    --letraLogo: #160744;
+}
+.central{
+    max-width: 1270px;
+    margin:0 auto;
+    height: 500px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

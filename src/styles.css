@@ -5,6 +5,8 @@
 /* font-family: 'Dancing Script', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 /* font-family: 'Lato', sans-serif; */
+
+
 :root{
     --rosaLogo: #ffccf9;
     --azulLogo: #affcff;
@@ -14,5 +16,5 @@
 *{
     margin:0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;
 }

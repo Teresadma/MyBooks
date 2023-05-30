@@ -14,6 +14,8 @@ import { AguilaComponent } from './pages/aguila/aguila.component';
 import { HeroeComponent } from './pages/heroe/heroe.component';
 import { EstrellaComponent } from './pages/estrella/estrella.component';
 import { AndroideComponent } from './pages/androide/androide.component';
+import { LoginComponent } from './pages/login/login.component';
+
 
 
 
@@ -32,7 +34,8 @@ const routes: Routes = [
   {path: "aguila", component: AguilaComponent}, 
   {path: "heroe", component: HeroeComponent}, 
   {path: "estrella", component: EstrellaComponent}, 
-  {path: "androide", component: AndroideComponent}, 
+  {path: "androide", component: AndroideComponent},
+  {path: "login", component: LoginComponent}, 
 
   {path:"**", component: HomeComponent},
 ];
