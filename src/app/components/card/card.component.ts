@@ -13,7 +13,7 @@ export class CardComponent implements OnInit
 {
   @Input() libroPadre: Book;
   @Input() esPar: boolean;
-  @Output() borrarCard =  new EventEmitter<number>();  
+  @Output() borrarCard =  new EventEmitter<Book>();  
 
   //CONSTRUCTOR
   public eliminado: boolean;
@@ -33,9 +33,13 @@ export class CardComponent implements OnInit
   // }
 
   closeCard(){
+
     this.borrarCard.emit(this.libroPadre.id_book);
   }
   ngOnInit(): void
   {
+
+        this.borrarCard.emit(this.libroPadre);
+
   }
 }

@@ -21,11 +21,28 @@ export class BooksComponent implements OnInit{
   ngOnInit(): void
   {
   }
+
   eliminarCard(id:number):void {
     this.booksService.delete(id);
     this.libros = this.booksService.getAll();
 
     this.toastr.success('Se ha eliminado correctamente');
+    alert("Se ha eliminado el libro correctamente");
+  }
+  oneBook(id:number):Book{    
+    // return this.booksService.getOne(id);
+    // let libros = this.booksService.getAll();
+    // let idlibro = $("idbook") 
+    return    
+
+    newLibro( newIDBook: number,newIDUser: number, newTitle: string,newType: string,newAuthor: string,newPrice: number,newPhoto: string){
+      let nuevo: Book = new Book(newIDBook,newIDUser, newTitle,newType,newAuthor,newPrice,newPhoto)
+      this.libros.push(nuevo)
+    }
+  eliminarCard(libroPadre:Book) {
+    let filtrado = this.libros.filter(libroDelete => libroDelete.id_book != libroPadre.id_book);
+    this.libros = filtrado;
+
   }
   oneBook(id:string){ 
     
