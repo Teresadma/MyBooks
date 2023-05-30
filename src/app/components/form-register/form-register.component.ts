@@ -25,9 +25,9 @@ export class FormRegisterComponent implements OnInit {
     this.myForm = this.formBuilder.group({
       name: [, Validators.required],
       surname: [, Validators.required],
-      email: [, Validators.required, Validators.email],
-      password: [, Validators.required, Validators.minLength(minPassLength)],
-      password2: [,Validators.required, this.checkPasswords],
+      email: [, [Validators.required, Validators.email]],
+      password: [, [Validators.required, Validators.minLength(minPassLength)]],
+      password2: [,[Validators.required, this.checkPasswords]],
     })
   }
 

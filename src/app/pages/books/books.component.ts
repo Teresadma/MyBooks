@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BooksService } from 'src/app/shared/books.service';
 import { Router} from '@angular/router';
 import { Book } from 'src/app/models/book';
+import { ToastrService } from 'ngx-toastr';
 declare var $: any;
 
 @Component({
@@ -14,7 +15,7 @@ export class BooksComponent implements OnInit{
   // public eliminado: boolean;
   
   //constructor
-  constructor(public booksService: BooksService, private router: Router){
+  constructor(public booksService: BooksService, private router: Router, private toastr: ToastrService){
     this.libros = this.booksService.getAll()
   }
   ngOnInit(): void
@@ -22,9 +23,9 @@ export class BooksComponent implements OnInit{
   }
   eliminarCard(id:number):void {
     this.booksService.delete(id);
-    this.libros = this.booksService.getAll()
+    this.libros = this.booksService.getAll();
 
-    alert("Se ha eliminado el libro correctamente");
+    this.toastr.success('Se ha eliminado correctamente');
   }
   oneBook(id:string){ 
     
@@ -40,6 +41,10 @@ export class BooksComponent implements OnInit{
       this.libros = [librobuscado]
       console.log(this.libros)
       console.log("adios")}
+      else{
+        this.toastr.warning('El id del libro no existe');
+
+      }
     }
   } 
 }
