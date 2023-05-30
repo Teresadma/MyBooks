@@ -23,7 +23,9 @@ main{
 }
 .saludo{
     font-family: 'Dancing Script', cursive;
-    font-size: 30px;
+    font-size: 25px;
+    margin:0;
+    padding: 0;
 }
     .central img{
         
@@ -35,13 +37,19 @@ main{
         text-align: center;
         color: var(--letraLogo);
     }
-    .me{
+    .yo{
         
         font-family: 'Lato', sans-serif;
         margin:20px;        
         text-align: justify;
+        font-size: 15px;
     }
         .negrita{
             font-weight: bold;
             color:var(--letraLogo)
+        }
+
+        p{
+            margin:10px;
+            padding:0
         }

@@ -10,19 +10,36 @@ declare var $: any;
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit{
+  public libros: Book[];
+  // public eliminado: boolean;
+  
   //constructor
-  constructor(public booksService: BooksService, private router: Router){}
+  constructor(public booksService: BooksService, private router: Router){
+    this.libros = this.booksService.getAll()
+  }
   ngOnInit(): void
   {
   }
   eliminarCard(id:number):void {
     this.booksService.delete(id);
+    this.libros = this.booksService.getAll()
+
     alert("Se ha eliminado el libro correctamente");
   }
-  oneBook(id:number):Book{    
-    // return this.booksService.getOne(id);
-    // let libros = this.booksService.getAll();
-    // let idlibro = $("idbook") 
-    return    
-  }
+  oneBook(id:string){ 
+    
+    if(id == ""){
+      this.libros=this.booksService.getAll();
+      console.log(this.libros)
+      console.log("pepe")
+    }else{
+      let number : number = Number(id)  
+      let librobuscado: Book;
+      librobuscado = this.booksService.getOne(number)
+     if(librobuscado != undefined){      
+      this.libros = [librobuscado]
+      console.log(this.libros)
+      console.log("adios")}
+    }
+  } 
 }

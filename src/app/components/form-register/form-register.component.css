@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 /* font-family: 'Lato', sans-serif; */
-.form{
+.formu{
     font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
@@ -10,14 +10,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 17px;
+    margin:0;
+    padding: 0;
     
 }
 .imagen{
     width: 30%;
+    margin:0;
+    padding: 0;
 }
 .formulario{
     width: 100%;
-    height: 250px;
+    height: 100%;
     display:flex;
     flex-direction: column;
     justify-content: space-around;

@@ -1,12 +1,16 @@
-<div class="card" >
-    <div class="card-details">
+<div class="librito" >
+    <div class="detalles">
         <div class="boton">
-            <button type="button" (click)="closeCard()">X</button>
+            <button class="boton2" type="button" (click)="closeCard()">X</button>
         </div>
-        <div class="imagen"><img src="{{libroPadre.photo}}" alt="" style="width: 100%; border-radius: 10%;"></div>
-        <p class="title">{{libroPadre.title}}</p>
-        <p class="text-body">{{libroPadre.type}}</p>
-        <p class="text-body">{{libroPadre.id_book | refID}}</p>
+        <div class="imagen">
+            <img src="{{libroPadre.photo}}" alt="" >
+        </div>
+        <div class="texto">
+            <p class="titulo">{{libroPadre.title}}</p>
+            <p class="cuerpo">{{libroPadre.type}}</p>
+            <p class="cuerpo">{{libroPadre.id_book | refID}}</p>    
+        </div>
     </div>
     <button (click) = "goBook()" class="card-button" [ngClass]="esPar ? 'par-button' : 'impar-button'">¡Léeme!</button>
   </div>

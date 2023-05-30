@@ -1,15 +1,13 @@
 <div class="central">
     <div class="cajita">
-        <div><input placeholder="ID del libro que buscas" type="text" name="text" class="input" #idbook>
-        <button class="buscar" (click)="oneBook(+idbook.value)"> Buscar </button>
-        </div>
-        
+        <div><input placeholder="ID del libro que buscas" type="text" name="text" class="input" #id>
+        <button class="buscar" (click)="oneBook(id.value)"> Buscar </button>
+        </div>        
         <div class="libros">
-            <ng-container *ngFor="let libro of booksService.getAll(); let even = even;">
-                <app-card [libroPadre] = "libro" [esPar] = "even" (borrarCard) = "eliminarCard($event)" ></app-card>
+            <ng-container *ngFor="let libro of this.libros; let even = even;">
+                <app-card [libroPadre] = "libro" [esPar] = "even" (borrarCard) = "eliminarCard($event)"></app-card>
             </ng-container> 
-            <div *ngIf="booksService.getAll().length===0" class="noLibros">En estos momentos, no hay libros disponibles.</div>
+            <div *ngIf="libros.length===0" class="noLibros">En estos momentos, no hay libros disponibles.</div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </div>

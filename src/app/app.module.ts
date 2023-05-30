@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,8 @@ import { AguilaComponent } from './pages/aguila/aguila.component';
 import { HeroeComponent } from './pages/heroe/heroe.component';
 import { EstrellaComponent } from './pages/estrella/estrella.component';
 import { AndroideComponent } from './pages/androide/androide.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormLoginComponent } from './components/form-login/form-login.component';
 
 
 
@@ -47,11 +50,15 @@ import { AndroideComponent } from './pages/androide/androide.component';
     AguilaComponent,
     HeroeComponent,
     EstrellaComponent,
-    AndroideComponent,  
+    AndroideComponent,
+    LoginComponent,
+    FormLoginComponent,  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

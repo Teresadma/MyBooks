@@ -16,12 +16,21 @@ export class CardComponent implements OnInit
   @Output() borrarCard =  new EventEmitter<number>();  
 
   //CONSTRUCTOR
+  public eliminado: boolean;
 
   constructor(public booksService: BooksService, private router: Router){}
+  // eliminarCard(id:number):void {
+  //   this.booksService.delete(id);
+  //   alert("Se ha eliminado el libro correctamente");
+  // }
 
   goBook(){
-    this.router.navigate(['/pimpampum1'])
+    this.router.navigateByUrl(this.libroPadre.link)
   }
+  // eliminarCard(id_book:number):void {
+  //   this.eliminado = this.booksService.delete(id);
+  //   alert("Se ha eliminado el libro correctamente");
+  // }
 
   closeCard(){
     this.borrarCard.emit(this.libroPadre.id_book);
