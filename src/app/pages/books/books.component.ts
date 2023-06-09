@@ -3,7 +3,7 @@ import { BooksService } from 'src/app/shared/books.service';
 import { Router} from '@angular/router';
 import { Book } from 'src/app/models/book';
 import { ToastrService } from 'ngx-toastr';
-declare var $: any;
+import { Respuesta } from 'src/app/models/respuesta';
 
 @Component({
   selector: 'app-books',
@@ -16,35 +16,43 @@ export class BooksComponent implements OnInit{
   
   //constructor
   constructor(public booksService: BooksService, private router: Router, private toastr: ToastrService){
-    this.libros = this.booksService.getAll()
+    this.libros = [];
+    this.booksService.getLibros()
+    .subscribe((resp: Respuesta) => {
+      this.libros = resp.data
+    }) 
   }
   ngOnInit(): void
   {
   }
   eliminarCard(id:number):void {
-    this.booksService.delete(id);
-    this.libros = this.booksService.getAll();
-
+    this.booksService.del(id)
+    .subscribe(() => {
+        let filtrado = this.libros.filter(book => book.id_book !== id);  
+        this.libros = filtrado;
+    })
     this.toastr.success('Se ha eliminado correctamente');
+    this.booksService.getLibros()
+        .subscribe((resp: Respuesta) => {
+          this.libros = resp.data
+        })    
   }
-  oneBook(id:string){ 
-    
-    if(id == ""){
-      this.libros=this.booksService.getAll();
-      console.log(this.libros)
-      console.log("pepe")
-    }else{
-      let number : number = Number(id)  
-      let librobuscado: Book;
-      librobuscado = this.booksService.getOne(number)
-     if(librobuscado != undefined){      
-      this.libros = [librobuscado]
-      console.log(this.libros)
-      console.log("adios")}
-      else{
-        this.toastr.warning('El id del libro no existe');
 
-      }
-    }
-  } 
+  oneBook(id:string){
+    let number : number = Number(id)
+    console.log(number)  
+    this.booksService.getOne(number)
+    .subscribe((librito: Book)=>{
+      if(librito){
+        this.libros = [librito];
+        this.toastr.success("Librito encontrado")
+      }else{
+        this.booksService.getLibros()
+        .subscribe((resp: Respuesta) => {
+          this.libros = resp.data
+        })    
+        this.toastr.warning("Librito no existe")
+      }     
+    })
+  }
 }

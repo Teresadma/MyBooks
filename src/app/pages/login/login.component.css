@@ -8,12 +8,3 @@
     --amarilloLogo: #fff5ba;
     --letraLogo: #160744;
 }
-.central{
-    max-width: 1270px;
-    margin:0 auto;
-    height: 500px;
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}

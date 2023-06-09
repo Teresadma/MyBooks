@@ -5,7 +5,7 @@
         </div>        
         <div class="libros">
             <ng-container *ngFor="let libro of this.libros; let even = even;">
-                <app-card [libroPadre] = "libro" [esPar] = "even" (borrarCard) = "eliminarCard($event)"></app-card>
+                <app-card [libroPadre] = "libro" [esPar] = "even"  (borrarCard) = "eliminarCard($event)"></app-card>
             </ng-container> 
             <div *ngIf="libros.length===0" class="noLibros">En estos momentos, no hay libros disponibles.</div>
         </div>
