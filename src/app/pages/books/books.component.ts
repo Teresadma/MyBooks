@@ -49,7 +49,6 @@ export class BooksComponent implements OnInit{
         // this.toastr.success("Librito encontrado")
       }
     })
-  }
 
   eliminarCard(id:number):void {
   console.log(id)
