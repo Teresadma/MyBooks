@@ -1,1 +1,10 @@
-
+form{    
+    max-width: 1270px;
+    margin:0 auto;
+    height: 500px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;    
+}

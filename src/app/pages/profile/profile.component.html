@@ -2,15 +2,15 @@
     <div class="profile">
         <div class="user">
             <div class="imagen">
-                <img src="{{usuario.photo}}" alt="">
+                <img src="{{userService.user.photo}}" alt="">
             </div>
             <div class="me">
-                {{usuario.name}} {{usuario.last_name}}
+                {{userService.user.name_user}} {{userService.user.last_name_user}}
             </div>
             <div class="form">
-                Nombre <div>{{usuario.name}}</div>
-                Apellido<div>{{usuario.last_name}}</div>
-                Email<div>{{usuario.email}}</div>   
+                Nombre <div>{{userService.user.name_user}}</div>
+                Apellido<div>{{userService.user.last_name_user}}</div>
+                Email<div>{{userService.user.email}}</div>   
             </div>
         </div>
         <div class="newUser">
@@ -20,7 +20,7 @@
                 <input type="text" id="surname" #surname placeholder="Apellido">
                 <input type="text" id="email" #email placeholder="Email">
                 <input type="text" id="url" #url placeholder="Url">
-                <button type="button" class="modificar" on-click="info(name.value,surname.value,email.value,url.value)">Modificar</button>
+                <button type="button" class="modificar" (click)="info(name,surname,email,url)">Modificar</button>
             </div>
         </div>
     </div>   

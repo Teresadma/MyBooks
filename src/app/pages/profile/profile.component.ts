@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/shared/user.service';
+import { Respuesta } from 'src/app/models/respuesta';
+import { ToastrService } from 'ngx-toastr';
+
+
 
 @Component({
   selector: 'app-profile',
@@ -8,15 +13,33 @@ import { User } from 'src/app/models/user';
 })
 export class ProfileComponent {
   public usuario : User;
+
   //constructor
-  constructor(){
-    this.usuario = new User (1,"Maritere","de Miguel","teresa.demiguel@gmail.com", "https://cdn.pixabay.com/photo/2015/11/17/13/13/puppy-1047521_1280.jpg","perrito")
+  constructor(public userService: UserService, private toastr: ToastrService){
+    this.usuario = this.userService.user;
+    console.log(this.usuario)
   }
-  info(newName:string,newLastname:string,newEmail:string,newPhoto:string){
-    this.usuario.name = newName;
-    this.usuario.last_name = newLastname;
-    this.usuario.email = newEmail;
-    this.usuario.photo = newPhoto;
+  info(newName:HTMLInputElement,newLastname:HTMLInputElement,newEmail:HTMLInputElement,newPhoto:HTMLInputElement){
+    this.usuario.name_user = newName.value;
+    this.usuario.last_name_user = newLastname.value;
+    this.usuario.email = newEmail.value;
+    this.usuario.photo = newPhoto.value;  
+    this.usuario.id_user = this.userService.user.id_user; 
+    console.log(this.usuario)
+    this.userService.edit(this.usuario)
+    .subscribe((resp:Respuesta) => 
+    {
+     
+      if (!resp.error)
+      {
+        this.toastr.success("Perfil editado correctamente", "",
+                            {timeOut:2000, positionClass:'toast-top-center'});
+         
+      }else
+      this.toastr.success("Perfil editado correctamente", "",
+                            {timeOut:2000, positionClass:'toast-top-center'});
+         
+    })
   }
 }
 

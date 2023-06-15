@@ -2,22 +2,29 @@
 /* font-family: 'Lato', sans-serif; */
 .formu{
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     height: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 .info{
-    height: 200px;
     display:flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-size: 17px;
+    border:1px solid red;
+}
+.info p{
+    height: 100%;
+    display:flex;
+    font-size: 20px;
     margin:0;
     padding: 0;
     
 }
 .imagen{
-    width: 30%;
+    width: 60%;
+    height: 40%;
     margin:0;
     padding: 0;
 }
@@ -26,11 +33,15 @@
     height: 100%;
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    gap:3%;
     margin:0;
-    padding: 0;    
+    padding: 0;
+    border: 1px solid red;
 }
+/* .button{
+    margin-top:15px;
+} */
     /* .formulario input{
         width: 60%;
         height: 40px;
