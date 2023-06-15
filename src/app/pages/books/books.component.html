@@ -4,10 +4,11 @@
         <button class="buscar" (click)="oneBook(id.value)"> Buscar </button>
         </div>        
         <div class="libros">
-            <ng-container *ngFor="let libro of this.libros; let even = even;">
-                <app-card [libroPadre] = "libro" [esPar] = "even"  (borrarCard) = "eliminarCard($event)"></app-card>
+            <ng-container *ngFor="let libro of libros; let even = even;">
+                <app-card [libroPadre] = "libro" [esPar] = "even" (borrarCard) = "eliminarCard($event)" ></app-card>
             </ng-container> 
             <div *ngIf="libros.length===0" class="noLibros">En estos momentos, no hay libros disponibles.</div>
         </div>
     </div>
 </div>
+

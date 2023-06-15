@@ -13,7 +13,7 @@ import { Respuesta } from 'src/app/models/respuesta';
   templateUrl: './addbook.component.html',
   styleUrls: ['./addbook.component.css']
 })
-export class AddbookComponent 
+export class AddbookComponent
 {
   public message: string;
 
@@ -21,20 +21,23 @@ export class AddbookComponent
     this.message = null;
   }  
 
-  newLibro(newIDBook: HTMLInputElement,newIDUser: HTMLInputElement, newTitle: HTMLInputElement,newType: HTMLInputElement,newAuthor: HTMLInputElement,newPrice: HTMLInputElement,newPhoto: HTMLInputElement,newLink:HTMLInputElement){
-    let nuevo: Book = new Book(parseInt(newIDBook.value),parseInt(newIDUser.value), newTitle.value,newType.value,newAuthor.value,parseInt(newPrice.value),newPhoto.value,newLink.value)
+  newLibro(newIDUser: HTMLInputElement, newTitle: HTMLInputElement,newType: HTMLInputElement,newAuthor: HTMLInputElement,newPrice: HTMLInputElement,newPhoto: HTMLInputElement,newLink:HTMLInputElement){
+    let nuevo: Book = new Book(0,parseInt(newIDUser.value), newTitle.value,newType.value,newAuthor.value,parseInt(newPrice.value),newPhoto.value,newLink.value)
     this.booksService.add(nuevo)
-    .subscribe((resp:Respuesta) => 
-    {
-      if (!resp.error)
+    .subscribe((data: string) =>
       {
-        this.toastr.success("Libro insertado correctamente", "",
-                            {timeOut:2000, positionClass:'toast-top-center'});
-         
-      }else
-      this.toastr.error('El libro ya existe',"",
-                        {timeOut:2000, positionClass:'toast-top-center'})
-    })
+        if (data != "-1")
+        {
+          newIDUser.value = "";
+          newTitle.value = "";
+          newPhoto.value = "";
+          newAuthor.value = "";
+          newLink.value = "";
+          newType.value = "";
+        }else{
+          console.log("Error al insertar el usuario")
+        }
+      })
   }
 }
 
