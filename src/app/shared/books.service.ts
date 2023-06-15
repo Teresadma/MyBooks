@@ -10,17 +10,15 @@ import { UserService } from './user.service';
 export class BooksService {
   private url: string = "http://localhost:4000/books";
   constructor(private http: HttpClient, public userService: UserService){}
-  //METODOS
-  // public getAll():Book[]  {    
-  //   return this.books;
-  // }
-  public getLibros(): Observable<Book[]>{
+
+  public getLibros(): Observable<any> {
     let id = this.userService.user.id_user;
     let url = `${this.url}/${id}`
-    return this.http.get<Book[]>(url)
+    return this.http.get(url)
   }
   public getLibroID(id_book: Number){
     let idU = this.userService.user.id_user;
+    console.log(id_book)
     let url = `${this.url}/${idU}/${id_book}`;
     return this.http.get(url)
   }

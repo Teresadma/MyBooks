@@ -12,7 +12,6 @@ export class UserService {
   public user: User;
   constructor(private http: HttpClient) {
     this.logueado = false;
-    this.user= null;
    }
 
   public register (user: User){

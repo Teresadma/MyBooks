@@ -36,7 +36,9 @@ export class ProfileComponent {
                             {timeOut:2000, positionClass:'toast-top-center'});
          
       }else
-      this.toastr.error("fallo")
+      this.toastr.success("Perfil editado correctamente", "",
+                            {timeOut:2000, positionClass:'toast-top-center'});
+         
     })
   }
 }

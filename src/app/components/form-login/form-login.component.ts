@@ -4,6 +4,7 @@ import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/shared/user.service';
 import { Router} from '@angular/router';
 import { Login } from 'src/app/models/login';
+import { Respuesta } from 'src/app/models/respuesta';
 
 @Component({
   selector: 'app-form-login',
@@ -13,29 +14,22 @@ import { Login } from 'src/app/models/login';
 export class FormLoginComponent implements OnInit{
   public user: User;
   constructor(public userService: UserService, public router: Router){
-    this.user = new User(null,null,null,"",null,"")
+    this.user = new User(0,"","","","","")
   }
 
   onSubmit(form:NgForm){
-    let email: string = form.value.email;
-    let password: string = form.value.password;
-    this.user.email = email;
-    this.user.password = password;
     this.userService.login(this.user)
-    .subscribe((log: User) =>
+    .subscribe((res: Respuesta) =>
     {
-      if(log){
+      if(res.mensaje === "Los datos son correctos" ){
         this.userService.logueado = true;
-        this.userService.user = log;
-        console.log(this.userService.user.id_user)
+        this.userService.user = res.data_user[0];
+        // console.log(res.data_user)
         this.router.navigateByUrl('/books')
       }else{
-        console.error("Error al inciar sesión")
+        console.log("Error al inciar sesión");
+        this.userService.logueado = false;
       }
-      console.log(log)
-    },
-    (error) => {
-      console.log(error)
     })
   }
 
